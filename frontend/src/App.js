@@ -1,54 +1,56 @@
-import { useEffect } from "react";
-import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import { Toaster } from "sonner";
+import "./App.css";
+import { AuthProvider } from "./context/AuthContext";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import ChatBot from "./components/ChatBot";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Home from "./pages/Home";
+import News from "./pages/News";
+import Squad from "./pages/Squad";
+import Schedule from "./pages/Schedule";
+import Results from "./pages/Results";
+import Gallery from "./pages/Gallery";
+import Login from "./pages/Login";
+import Admin from "./pages/Admin";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
+export default function App() {
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
-
-function App() {
-  return (
-    <div className="App">
+    <AuthProvider>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
+        <div className="app-shell">
+          <Navbar />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/aktualnosci" element={<News />} />
+              <Route path="/zawodnicy" element={<Squad />} />
+              <Route path="/terminarz" element={<Schedule />} />
+              <Route path="/wyniki" element={<Results />} />
+              <Route path="/galeria" element={<Gallery />} />
+              <Route path="/login" element={<Login />} />
+              <Route
+                path="/admin"
+                element={
+                  <ProtectedRoute>
+                    <Admin />
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+          </main>
+          <Footer />
+          <ChatBot />
+          <Toaster
+            theme="dark"
+            position="top-right"
+            toastOptions={{
+              style: { background: "#0A0A0A", border: "1px solid rgba(255,255,255,0.1)", color: "#fff" },
+            }}
+          />
+        </div>
       </BrowserRouter>
-    </div>
+    </AuthProvider>
   );
 }
-
-export default App;
