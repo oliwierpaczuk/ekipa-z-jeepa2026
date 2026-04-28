@@ -38,7 +38,7 @@ export default function ChatBot() {
       <button
         onClick={() => setOpen((v) => !v)}
         data-testid="chatbot-toggle"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#FF007F] text-white flex items-center justify-center shadow-[6px_6px_0_rgba(255,255,255,0.1)] hover:bg-[#E0006F] transition-all animate-pulse-pink"
+        className="fixed bottom-6 left-6 z-[60] w-14 h-14 bg-[#FF007F] text-white flex items-center justify-center shadow-[6px_6px_0_rgba(255,255,255,0.1)] hover:bg-[#E0006F] transition-all animate-pulse-pink"
         aria-label="Asystent AI"
       >
         {open ? <X /> : <MessageCircle />}
@@ -47,7 +47,7 @@ export default function ChatBot() {
       {open && (
         <div
           data-testid="chatbot-panel"
-          className="fixed bottom-24 right-6 z-50 w-[92vw] sm:w-[400px] h-[560px] bg-[#0A0A0A] border border-white/10 flex flex-col scanlines"
+          className="fixed bottom-24 left-6 z-[60] w-[92vw] sm:w-[400px] h-[560px] bg-[#0A0A0A] border border-white/10 flex flex-col scanlines"
         >
           <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-black">
             <Sparkles size={16} className="text-[#FF007F]" />
