@@ -1,0 +1,109 @@
+{
+  "project_name": "EKIPA Z JEEPA",
+  "theme": "dark",
+  "archetype": "Archetype 2: The Performance Pro",
+  "emotional_tone": "Aggressive, modern, tactical, passionate, energetic",
+  "language": "Polish",
+  "colors": {
+    "background_primary": "#0A0A0A",
+    "background_secondary": "#121212",
+    "background_tertiary": "#1C1C1E",
+    "accent_primary": "#FF007F",
+    "accent_hover": "#E0006F",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A1A1AA",
+    "border_subtle": "rgba(255, 255, 255, 0.1)",
+    "overlay_dark": "rgba(10, 10, 10, 0.7)"
+  },
+  "typography": {
+    "headings_font": "Anton, sans-serif",
+    "body_font": "Inter, sans-serif",
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl md:text-7xl font-headings uppercase tracking-tighter leading-none",
+      "h2": "text-3xl sm:text-4xl md:text-5xl font-headings uppercase tracking-tight",
+      "h3": "text-2xl sm:text-3xl font-headings uppercase tracking-tight",
+      "h4": "text-lg sm:text-xl font-body font-bold tracking-wide",
+      "body": "text-base font-body text-zinc-300 leading-relaxed",
+      "labels": "text-xs font-body font-bold uppercase tracking-[0.2em] text-zinc-400"
+    }
+  },
+  "layout_spacing": {
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_spacing": "py-24 md:py-32",
+    "grid_strategy": "Tetris Grid (Asymmetric, tension-filled, overlapping elements)",
+    "card_padding": "p-6 md:p-8"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#FF007F] hover:bg-[#E0006F] text-white font-headings uppercase tracking-widest px-8 py-4 rounded-none transition-all duration-300 transform hover:-translate-y-1 shadow-[4px_4px_0px_rgba(255,255,255,0.1)] hover:shadow-[6px_6px_0px_rgba(255,255,255,0.2)]",
+      "secondary": "bg-transparent border border-zinc-700 hover:border-[#FF007F] text-white font-headings uppercase tracking-widest px-8 py-4 rounded-none transition-all duration-300 hover:bg-[#FF007F]/10"
+    },
+    "cards": {
+      "style": "bg-[#121212] border border-zinc-800 rounded-none overflow-hidden relative group",
+      "hover_effect": "border-zinc-700 hover:border-[#FF007F]/50 transition-colors duration-300"
+    },
+    "surface_strategies": {
+      "headers": "Crystal Glass: backdrop-blur-xl bg-black/60 border-b border-white/10",
+      "data_widgets": "Grid Borders: border-collapse style with border-r border-b border-border/40 for match stats and schedule",
+      "ai_chat": "Retro-Futurism mix: Deep black bg, subtle pink scanlines, glowing pink cursor"
+    }
+  },
+  "motion_interactions": {
+    "page_scroll": "Lenis smooth scrolling (momentum-based)",
+    "hover_states": "High contrast shifts. Explicit hover:text-white. Sharp, snappy transitions.",
+    "marquee": "React-fast-marquee for 'EKIPA Z JEEPA' repeating text in background (massive outline text text-8xl+ text-white/5)",
+    "reveal": "Framer motion staggered fade-up for news and players (duration 0.4s, easeOut)"
+  },
+  "media": {
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.unsplash.com/photo-1776160043138-52e2cf9c6e4e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxmb290YmFsbCUyMHN0YWRpdW0lMjBuaWdodCUyMGxpZ2h0c3xlbnwwfHx8fDE3Nzc0MTU1MDh8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Blurry lights streak across a dark stadium field",
+        "usage": "Hero section background with dark overlay (bg-black/50)"
+      },
+      {
+        "category": "texture_background",
+        "url": "https://images.unsplash.com/photo-1650804068570-7fb2e3dbf888?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2ODh8MHwxfHNlYXJjaHwyfHxkYXJrJTIwZ3J1bmdlJTIwdGV4dHVyZXxlbnwwfHx8fDE3Nzc0MTU1MDh8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Dark grunge texture",
+        "usage": "Background layer for squad or news sections to add grittiness"
+      },
+      {
+        "category": "player_action",
+        "url": "https://images.unsplash.com/photo-1763494392794-a07d77898569?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxmb290YmFsbCUyMHBsYXllciUyMGFjdGlvbiUyMG5pZ2h0fGVufDB8fHx8MTc3NzQxNTQ4MHww&ixlib=rb-4.1.0&q=85",
+        "description": "Football player running on field during heavy rain",
+        "usage": "News article thumbnail or gallery image"
+      },
+      {
+        "category": "match_intensity",
+        "url": "https://images.pexels.com/photos/13907421/pexels-photo-13907421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Intense soccer match under night lights",
+        "usage": "Schedule/Results section background or highlight image"
+      },
+      {
+        "category": "action_shot",
+        "url": "https://images.pexels.com/photos/221253/pexels-photo-221253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "An athlete in a red/pink uniform running with a football",
+        "usage": "Squad section featured image"
+      }
+    ],
+    "logo": {
+      "type": "placeholder_instruction",
+      "instruction": "User will provide the pink logo. Use an empty div or a temporary text-based logo matching the font for now. e.g. <div className='font-headings text-2xl text-[#FF007F] tracking-tighter'>EKIPA Z JEEPA</div>"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Use JS exclusively. NO TypeScript files.",
+    "Do NOT use 'Inter' for headings. Only use Anton or a bold Google Font equivalent (e.g., '@fontsource/anton' or import from Google Fonts) for headings.",
+    "Implement the UI with a very dark background (almost black) and vivid electric pink (#FF007F) as the sole accent color. Avoid purple gradients entirely.",
+    "Admin Panel: Create a simple dashboard to manage CRUD for News, Matches, and Squad. Use the 'Control Room' grid layout from E1 guidelines. High density, clear data.",
+    "AI Match Summaries: Display match results with a distinct 'AI Generated' tag. Use Shadcn components heavily customized to be dark and angular.",
+    "Fan Chatbot Assistant: Must be a floating interactive element or a dedicated route, styled with retro-futuristic dark mode elements.",
+    "Every page must have a sticky navigation with crystal glassmorphism.",
+    "Ensure all interactive elements have data-testid attributes for testing.",
+    "Apply Lenis for smooth scrolling in the main Layout.",
+    "Incorporate a react-fast-marquee with massive typography in the background of the Schedule or Squad section.",
+    "Never use raw transparent backgrounds behind text if an image is present. Use bg-black/60 or gradient overlays.",
+    "Use Shadcn UI components for complex interactions (Dialogs, Tabs, Admin Tables), but strip their default borders/radii to match the brutal, sharp, rounded-none sports aesthetic."
+  ]
+}
