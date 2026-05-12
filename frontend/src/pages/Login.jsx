@@ -53,9 +53,6 @@ export default function Login() {
             {busy ? "Logowanie..." : "Zaloguj się"}
           </button>
         </form>
-        <div className="mt-6 text-xs text-zinc-500 border-t border-white/5 pt-4">
-          Demo: <span className="text-zinc-300">admin@ekipazjeepa.pl</span> / <span className="text-zinc-300">admin123</span>
-        </div>
       </div>
     </div>
   );
