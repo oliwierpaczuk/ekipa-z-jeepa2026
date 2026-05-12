@@ -8,7 +8,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-[#FF007F] flex items-center justify-center font-headings text-black text-2xl">EJ</div>
+              <img
+                src="https://customer-assets.emergentagent.com/job_team-connect-139/artifacts/orwhoj99_AD80080E-609B-4533-9A63-D8C39DA6739C.png"
+                alt="EKIPA Z JEEPA"
+                className="w-14 h-14 object-contain"
+              />
               <div className="font-headings text-3xl">EKIPA Z JEEPA</div>
             </div>
             <p className="text-zinc-400 max-w-md leading-relaxed">

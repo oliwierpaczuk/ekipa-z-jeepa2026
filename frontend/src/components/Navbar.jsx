@@ -20,7 +20,11 @@ export default function Navbar() {
     <header className="glass sticky top-0 z-50" data-testid="site-navbar">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-3 group" data-testid="nav-logo-link">
-          <div className="w-9 h-9 bg-[#FF007F] flex items-center justify-center font-headings text-black text-xl">EJ</div>
+          <img
+            src="https://customer-assets.emergentagent.com/job_team-connect-139/artifacts/orwhoj99_AD80080E-609B-4533-9A63-D8C39DA6739C.png"
+            alt="EKIPA Z JEEPA"
+            className="w-10 h-10 md:w-12 md:h-12 object-contain"
+          />
           <div className="leading-none">
             <div className="font-headings text-xl md:text-2xl tracking-tight">EKIPA Z JEEPA</div>
             <div className="text-[10px] tracking-[0.28em] text-zinc-400 uppercase">Klub Piłkarski</div>
